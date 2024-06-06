@@ -57,69 +57,122 @@ document.write( "<h3>" + "<ul>" +
 // Assume that total marks are 500 for each student, display
 // the scores & percentages of students like:
 
-var studentName_3 = ["Maryam" , "Mashail" , "Tazmeen"];
-var studentScore_3 = [340 , 480 ,230];
-var totalMarks = 500 ;
-document.write("<h1>" + "STUDENT SCORE" + "</h1>")
-document.write( "<h3>" + "Score of " + studentName_3[0] + "is" + studentScore_3[0] + "." + "Percentage :" + (studentScore_3[0]*100/totalMarks) + "  %" + "</h3>");
-document.write( "<h3>" +"Score of " + studentName_3[1] + "is" + studentScore_3[1] + "." + "Percentage :" + (studentScore_3[1]*100/totalMarks) + "  %" + "</h3>");
-document.write( "<h3>" +"Score of " + studentName_3[2] + "is" + studentScore_3[2] + "." + "Percentage :" + (studentScore_3[2]*100/totalMarks) + "  %" + "</h3>");
+// var studentName_3 = ["Maryam" , "Mashail" , "Tazmeen"];
+// var studentScore_3 = [340 , 480 ,230];
+// var totalMarks = 500 ;
+// document.write("<h1>" + "STUDENT SCORE" + "</h1>")
+// document.write( "<h3>" + "Score of " + studentName_3[0] + "is" + studentScore_3[0] + "." + "Percentage :" + (studentScore_3[0]*100/totalMarks) + "  %" + "</h3>");
+// document.write( "<h3>" +"Score of " + studentName_3[1] + "is" + studentScore_3[1] + "." + "Percentage :" + (studentScore_3[1]*100/totalMarks) + "  %" + "</h3>");
+// document.write( "<h3>" +"Score of " + studentName_3[2] + "is" + studentScore_3[2] + "." + "Percentage :" + (studentScore_3[2]*100/totalMarks) + "  %" + "</h3>");
 
 // 9. Initialize an array with color names. Display the array
 // elements in your browser.
 
-var colorName = [];
+// var colorName = [];
 
 // a. Ask the user what color he/she wants to add to the
 // beginning & add that color to the beginning of the array.
 // Display the updated array in your browser.
-
-colorName.unshift(prompt("Type any colour name here to add at the beginning "));
-document.write("The colour named here to the you can type for the beginning:" + "<b>" + colorName + "</b>" + "</br>");
+// colorName.unshift(prompt("Type any colour name here to add at the beginning "));
+// document.write("The colour named here to the you can type for the beginning:" + "<b>" + colorName + "</b>" + "</br>");
 
 // b. Ask the user what color he/she wants to add to the end
 // & add that color to the end of the array. Display the
 // updated array in your browser.
 
-colorName.push (prompt("We want one more colour to add at the end") , prompt("Aik or colour da day"));
-document.write("The  updated colour  here to the adding ot the end" + "<b>" + colorName + "</b>" + "</br>");
+// colorName.push (prompt("We want one more colour to add at the end") , prompt("Aik or colour da day"));
+// document.write("The  updated colour  here to the adding ot the end" + "<b>" + colorName + "</b>" + "</br>");
 
-// c. Add two more color to the beginning of the array.
-// c. Add two more color to the beginning of the array.
+// // c. Add two more color to the beginning of the array.
+// // c. Add two more color to the beginning of the array.
 
-colorName.unshift(prompt("More _2 Colour") , prompt("one more"));
-document.write("More colour at the beginning :" + "<b>" + colorName + "</b>" + "</br>");
+// colorName.unshift(prompt("More _2 Colour") , prompt("one more"));
+// document.write("More colour at the beginning :" + "<b>" + colorName + "</b>" + "</br>");
 
-// d. Delete the first color in the array. Display the updated
-// array in your browser.
+// // d. Delete the first color in the array. Display the updated
+// // array in your browser.
 
-colorName.shift();
-document.write("After deleting the first one :" + "<b>" + colorName + "</b>" + "</br>");
+// colorName.shift();
+// document.write("After deleting the first one :" + "<b>" + colorName + "</b>" + "</br>");
 
-// e. Delete the last color in the array. Display the updated
-// array in your browser.
+// // e. Delete the last color in the array. Display the updated
+// // array in your browser.
 
-colorName.pop();
-document.write("After deleting the last one :" + "<b>" + colorName + "</b>" + "</br>");
+// colorName.pop();
+// document.write("After deleting the last one :" + "<b>" + colorName + "</b>" + "</br>");
 
 // f. Ask the user at which index he/she wants to add a color
 // & color name. /Then add the color to desired
 // position/index. . Display the updated array in your
-// browser.
+// // browser.
 
-var index = prompt("Add colour any position");
-var colour = prompt ("Which colour");
-colorName.splice(index,0,colour);
-document.write("Outcome after adding colour at the specific podition want you :" +  colorName + "</br>");
+// var index = prompt("Add colour any position");
+// var colour = prompt ("Which colour");
+// colorName.splice(index,0,colour);
+// document.write("Outcome after adding colour at the specific podition want you :" +  colorName + "</br>");
 
-// g. Ask the user at which index he/she wants to delete
-// color(s) & how many colors he/she wants to delete. Then
-// remove the sam/e number of color(s) from user-defined
-// position/index. . Display the updated array in your
-// browser.
+// // g. Ask the user at which index he/she wants to delete
+// // color(s) & how many colors he/she wants to delete. Then
+// // remove the sam/e number of color(s) from user-defined
+// // position/index. . Display the updated array in your
+// // browser.
 
-var index = prompt("Deleted which from specific position");
-var deleted_number = prompt("Write any  deleting colour you want");
+// var index = prompt("Deleted which from specific position");
+// var deleted_number = prompt("Write any  deleting colour you want");
 
-colorName.splice(index,deleted_number);
-document.write("colour to deleting the colour you want :" + colorName + "</br>");
+// colorName.splice(index,deleted_number);
+// document.write("colour to deleting the colour you want :" + colorName + "</br>");
+
+// 10. Write a p/rogram to store student scores in an array &
+// sort the array in ascending order using Array’s sort
+// method.
+var studentScore = [320,280,450,670];
+studentScore.sort( );
+
+document.write( "<b>" + "Student Score" + 320 + "," + 280 + "," + 450 + "," + 670 + "<b/> " + "<br/>");
+document.write( "<b>" +"Ordered Scores of student :" + studentScore + "<b/>" + "<br/>"  );
+
+// 11. Write a program to initialize an array with city names.
+// Copy 3 array elements from cities array to selectedCities
+// array.
+var cities = ["Karachi" , "Hyderabad" , "Lahore" , "Quetta"];
+document.write("Cities Name" + cities + "<br/>");
+var selectedCities = cities.slice(1,3);
+document.write("Selected Cities Name" + selectedCities  + "<br/>");
+
+var myArr = ["This " , "is " , "my " , "cat "];
+document.write("ARRAY : " + myArr + "<br/>");
+// ARRAY'JOIN METHPD
+// var joinString = myArr.join(" ");
+// document.write("String : " + joinString + "<br/>");
+// var newArr = ["Keyboard" , "Mouse" , "Printer" , "Moniter"];
+// document.write( "ARRAY : " + newArr + "<br/>");
+// var out = newArr.shift();
+// document.write(  out + "<br/>");
+// var out = newArr.shift();
+// document.write(  out + "<br/>");
+// var out = newArr.shift();
+// document.write( out + "<br/>");
+// var out = newArr.shift();
+// document.write( out + "<br/>");
+// var newArr = ["Keyboard" , "Mouse" , "Printer" , "Moniter"];
+// document.write( "ARRAY : " + newArr + "<br/>");
+// var out = newArr.pop();
+// document.write(  out + "<br/>");
+// var out = newArr.pop();
+// document.write(  out + "<br/>");
+// var out = newArr.pop();
+// document.write( out + "<br/>");
+// var out = newArr.pop();
+// document.write( out + "<br/>");
+
+var phoneMenuFactures = ["Apple" , "Samesung" , "Motrolla","Realme","Vivo"];
+var index = 0 ;
+document.write("<select>")
+document.write("<option>" + phoneMenuFactures[index++] + "</option>")
+document.write("<option>" + phoneMenuFactures[index++] + "</option>")
+document.write("<option>" + phoneMenuFactures[index++] + "</option>")
+document.write("<option>" + phoneMenuFactures[index++] + "</option>")
+document.write("<option>" + phoneMenuFactures[index++] + "</option>")
+document.write("</select>")
+
