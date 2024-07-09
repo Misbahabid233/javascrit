@@ -1,7 +1,7 @@
 // // 1. Write a progr/am that displays current date and time in
 // // your browser.
 var currentDate = new Date();
-document.write( "Current Date : "+currentDate + "<br/>");
+document.write( "Current Date : "+currentDate + "<br/>"+ "<br/>");
 // // 2. Write a program that alerts the current month in words.
 // // For example December.
 // var monthsName = ["jan","feb","march","april","may","june","july","aug","sep","oct","nov","dec"]
@@ -64,7 +64,52 @@ document.write( "Current Date : "+currentDate + "<br/>");
 // 10. Write a program that displays in your browser the
 // seconds that elapsed between the reference date and the
 // beginning of 2015.
-var referenceDate = new Date("Sat Dec 05 2015 22:50:16 GMT +0500");
-var startOfYear = new Date("Jan 1 , 2015 00:00:00 GMT +0500");
-var secondsElapased = Math.round((referenceDate-startOfYear)/1000);
-document.write("On reference date " + referenceDate + ","  +"<br/>"+ secondsElapased + "seconds has passed since beginning of 2015")
+// var referenceDate = new Date("Sat Dec 05 2015 22:50:16 GMT +0500");
+// var startOfYear = new Date("Jan 1 , 2015 00:00:00 GMT +0500");
+// var secondsElapased = Math.round((referenceDate-startOfYear)/1000);
+// document.write("On reference date " + referenceDate + ","  +"<br/>"+ secondsElapased + "seconds has passed since beginning of 2015")
+// 12. Write a program that creates a date object and show the
+// date in an alert box that is reset to 100 years back?
+// var currentAgo = new Date(currentDate.getTime()-100*365.25*24*60*60*1000);
+// document.write("100 years back, it was " + currentAgo);
+// 13. Write a program to ask the user about his age. Calculate
+// and show his birth year in your browser.
+// var userBirthDate =new Date("May,4 2007")
+// var msdiff = currentDate-userBirthDate;
+// var ageInYear = Math.floor(msdiff/(1000*60*60*24*365.25));
+// document.write("Your age is : " + ageInYear);
+// var userAge = prompt("Please enter your age.");
+// var currentYear=new Date().getFullYear();
+// var birthYear = currentYear-userAge;
+// document.write("Your Birth year is : " + birthYear)
+// 14. Write a program to generate your K-Electric bill in your
+// browser. All the amounts should be rounded off to 2
+// decimal places. Display the following fields:
+// a. Customer Name
+// b. Current Month
+// c. Number of units
+// d. Charges per unit
+// e. Net Amount/ Payable (within Due Date)
+// f. Late Payment Surcharge
+// g. Gross Amount Payable (after Due Date)
+// Where,
+
+
+var customerName = "ABC customer";
+var monthsName = ["jan","feb","march","april","may","june","july","aug","sep","oct","nov","dec"];
+var month = currentDate.getMonth();
+var numberOfUnit = 410;
+var chargesPerUnit = 16;
+var latePaymentSurcharge = 350;
+var netAmountPyable = numberOfUnit*chargesPerUnit;
+console.log(netAmountPyable)
+var grossAmountPayable = netAmountPyable + latePaymentSurcharge;
+console.log(grossAmountPayable)
+netAmountPyable = parseFloat(netAmountPyable.toFixed(2));
+console.log(netAmountPyable)
+grossAmountPayable = parseFloat(grossAmountPayable.toFixed(2));
+console.log(grossAmountPayable)
+document.write("<strong> K - Electric Bill <strong/> " + "<br/>" + "<br/>")
+document.write("Cuastomer Name : "+ customerName + "<br/>" ," Month : " + monthsName[currentDate.getMonth()] + "<br/>"); 
+document.write("Numbers of units : " + numberOfUnit + "<br/>" , "Charges per unit : " + chargesPerUnit + "<br/>" + "<br/>");
+document.write("Net Amount Payable (within Due Date) : " + netAmountPyable + "<br/>", "Late Payment Surcharge : " + latePaymentSurcharge + "<br/>" , "Gross Amount Payable (after Due Date) : " + grossAmountPayable  )
