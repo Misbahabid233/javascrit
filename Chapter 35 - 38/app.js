@@ -120,10 +120,113 @@
 // string in upper case.
 // EXAMPLE STRING : 'the quick brown fox'
 // EXPECTED OUTPUT : 'The Quick Brown Fox'
-function capatalizeFirstWord(str){
-    return str.split(" ").map(word=>word[0].toUpperCase() + word.substr(1).join(""));
+// var str = "the quick brown fox";
+// function capatalizeFirstWord(){
+//    var arr = str.split(" ");
+//     var add = [];
+//     var joinMethode;
+//     for(var i = 0; i<arr.length;i++){
+//         var upperCase = arr[i][0].toUpperCase()+arr[i].slice(1);
+//         add.push(upperCase);
+//         joinMethode=add.join(" ")
+//     }
+//     return joinMethode;
+// }
+// // // document.write("STRING : " + str + "<br/>"+ " " + "OUTPUT : " + capatalizeFirstWord());
+
+// 12. Write a JavaScript function that accepts a string as a
+// parameter and find the longest word within the string.
+// EXAMPLE STRING : 'Web Development Tutorial'
+// EXPECTED OUTPUT : 'Development'
+
+
+// function largestWord(string){
+//     var arr = string.split(' ');
+//     var Word1 = arr[0].length;
+//     for(var i = 0; i<arr.length;i++){
+//         if(Word1<arr[i].length){
+//             Word1= arr[i];
+//         }
+//     }
+//    return Word1;
+// }
+// var string = "Web Development Tutorial"
+// var result=largestWord(string) ;
+// document.write("STRING : " + string + "<br/>" + "OUTPUT : " + result)
+
+// 13. Write a JavaScript function that accepts two arguments, a
+// string and a letter and the function will count the number of
+
+// function | JAVASCRIPT
+
+// Page 3 of 4
+
+// occurrences of the specified letter within the string.
+// Sample arguments : 'JSResourceS.com', 'o'
+
+// function countLetterOccurences(string,letter){
+//     string = string.toLowerCase();
+//     letter = letter.toLowerCase();
+//     var count = 0;
+//     for(var i = 0; i<string.length;i++) {
+//         if(string[i]===letter){
+//             count++;
+//         }
+    
+//     }
+//     return count;
+// }
+// document.write(countLetterOccurences('JSResourceS,com' , 'o'  ) )
+
+
+// 14. The Geometrizer
+// Create 2 functions that calculate properties of a circle, using
+// the definitions here.
+// Create a function called calcCircumference:
+// • Pass the radius to the function.
+// • Calculate the circumference based on the radius, and output
+// "The circumference is NN".
+// Create a function called calcArea:
+// • Pass the radius to the function.
+// • Calculate the area based on the radius, and output "The area
+// is NN".
+
+// Circumference of circle = 2πr
+// Area of circle = πr2
+function  calcCircumference(value){
+    var  circumference = 2*3.14*value;
+    return circumference;
 }
-console.log(capatalizeFirstWord("the quick brown fox"));
+    function calArea(value){
+        var area = 3.14*(value*value);
+        return area;
+    } 
+
+var radius = Number(prompt("Enter radius of a circle"));
+var circumference= calcCircumference(radius);
+var area = calArea(radius);
+console.log("The Circumference of circle is " + circumference  )
+console.log("The Area of circle is " + area  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
